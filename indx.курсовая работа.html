@@ -1,0 +1,1527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Курсовая работа</title>
+           <div>
+           <h1 >Основные типы данных в Python</h1>
+           </div>
+           <div style="position: relative;background-color: #8A2BE2;width: 100%;height: 100px;">
+           	<br>
+           	<h2 style="position: relative;text-align:center ;">Типы данных в Python</h2>
+           	<br>
+       </div>
+   <div>
+		<ul>
+			<button><li><a href="#Числа">Числа</a></li></button>
+			<button><li><a href="#Строки (Strings)">Строки (Strings)</a></li></button>
+			<button><li><a href="#Список (List)">Список (List)</a></li></button>
+			<button><li><a href="#Словарь (Dictionary)">Словарь (Dictionary)</a></li></button>
+			<button><li><a href="#Кортеж (Tuple)">Кортеж (Tuple)</a></li></button>
+			<button><li><a href="#Множество (Set)">Множество (Set)</a></li></button>
+			<button><li><a href="#Булевы значения">Булевы значения</a></li></button>
+			<button><li><a href="#Преобразование типов">Преобразование типов</a></li></button>
+			<button><li><a href="#Проверка типов">Проверка типов</a></li></button>
+			<button><li><a href="#Вызов методов цепочкой">Вызов методов цепочкой</a></li></button>
+			<button><li><a href="#Основы сортировки данных">Основы сортировки данных</a></li></button>
+		</ul>
+	  </div>
+	  <hr>
+	  	<h2 style="position: relative;text-align:center ;">Python</h2> 
+        <section id="Основные типы данных в Python">
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>В Python есть несколько стандартных типов данных:
+           <br><br>
+           Numbers (числа)
+           <br>
+           Strings (строки)
+           <br>
+           Lists (списки)
+           <br>
+           Dictionaries (словари)<br>
+           Tuples (кортежи)
+           <br>
+           Sets (множества)
+           <br>
+            Boolean (логический тип данных)
+           <br><br>
+           Эти типы данных можно, в свою очередь, классифицировать по нескольким признакам:
+           <br><br>
+           изменяемые (списки, словари и множества)
+           <br>
+           неизменяемые (числа, строки и кортежи)
+           <br>
+           упорядоченные (списки, кортежи, строки и словари)
+           <br>
+           неупорядоченные (множества)
+           <br><br>
+           Содержание раздела:</big>
+           </div>
+     </p>
+   </section>
+   <section id="Числа">
+   	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #AFEEEE;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Числа</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big> *С числами можно выполнять различные математические операции <br><br>
+	      
+
+In [1]: 1 + 2
+<br>
+Out[1]: 3
+<br><br>
+
+In [2]: 1.0 + 2 
+<br>
+Out[2]: 3.0
+<br><br>
+
+In [3]: 10 - 4
+ <br>
+Out[3]: 6
+<br><br>
+
+In [4]: 2**3
+<br>
+Out[4]: 8
+<br><br>
+
+
+*Деление int и floa
+<br><br>
+
+In [5]: 10/3
+<br>
+Out[5]: 3.3333333333333335
+<br><br>
+
+In [6]: 10/3.0 
+<br>
+Out[6]: 3.3333333333333335
+<br><br>
+
+*С помощью функции round можно округлять числа до нужного количества знаков:
+<br><br>
+
+In [9]: round(10/3.0, 2)
+<br>
+Out[9]: 3.33
+<br><br>
+
+In [10]: round(10/3.0, 4)
+<br>
+Out[10]: 3.3333
+<br><br>
+
+*Остаток от деления
+<br><br>
+
+In [11]: 10 % 3
+<br>
+Out[11]: 1
+<br><br>
+
+*Операторы сравнения
+<br><br>
+
+In [12]: 10 > 3.0
+<br>
+Out[12]: True
+<br><br>
+
+In [13]: 10 < 3
+<br>
+Out[13]: False
+<br><br>
+
+In [14]: 10 == 3
+<br>
+Out[14]: False
+<br><br>
+
+In [15]: 10 == 10
+<br>
+Out[15]: True
+<br><br>
+
+In [16]: 10 <= 10
+<br>
+Out[16]: True
+<br><br>
+
+In [17]: 10.0 == 10
+<br>
+Out[17]: True
+<br><br>
+
+*Функция int() позволяет выполнять конвертацию в тип int. Во втором аргументе можно указывать систему счисления:
+<br><br>
+
+In [18]: a = '11'
+<br><br>
+
+In [19]: int(a)
+<br>
+Out[19]: 11
+<br><br>
+
+*Если указать, что строку a надо воспринимать как двоичное число, то результат будет таким:
+<br><br>
+
+In [20]: int(a, 2)
+<br>
+Out[20]: 3
+<br><br>
+
+*Конвертация в int типа float:
+<br><br>
+
+In [21]: int(3.333)
+<br>
+Out[21]: 3
+<br><br>
+
+In [22]: int(3.9)
+<br>
+Out[22]: 3
+<br><br>
+
+*Функция bin позволяет получить двоичное представление числа (обратите внимание, что результат - строка):
+<br><br>
+
+In [23]: bin(8)
+<br>
+Out[23]: '0b1000'
+<br><br>
+
+In [24]: bin(255)
+<br>
+Out[24]: '0b11111111'
+<br><br>
+
+*Аналогично, функция hex() позволяет получить шестнадцатеричное значение:
+<br><br>
+
+In [25]: hex(10)
+<br>
+Out[25]: '0xa'
+<br><br>
+
+*И, конечно же, можно делать несколько преобразований одновременно:
+<br><br>
+
+In [26]: int('ff', 16)
+<br>
+Out[26]: 255
+<br><br>
+
+In [27]: bin(int('ff', 16))
+<br>
+Out[27]: '0b11111111'
+<br><br>
+
+*Для более сложных математических функций в Python есть модуль math:
+<br><br>
+
+In [28]: import  math
+<br><br>
+
+In [29]: math.sqrt(9)
+<br>
+Out[29]: 3.0
+<br><br>
+
+In [30]: math.sqrt(10)
+<br>
+Out[30]: 3.1622776601683795
+<br><br>
+
+In [31]: math.factorial(3)
+<br>
+Out[31]: 6
+<br><br>
+
+In [32]: math.pi
+<br>
+Out[32]: 3.141592653589793
+<br><br>
+
+</big>
+           </div>
+   </section>
+     <section id="Строки (Strings)">
+  </div>
+     <div style="position: relative;background-color: #98FB98;width: 100%;height: 100px;"><h2 style="position: relative;text-align:center ; top: 30px;">Строки (Strings)</h2> 
+     </div>  <section id="Основные типы данных в Python">
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Строка в Python это:
+	       	<br><br>
+
+    последовательность символов, заключенная в кавычки
+    <br>
+    неизменяемый упорядоченный тип данных
+    <br><br>
+
+Примеры строк:
+<br><br>
+
+In [9]: 'Hello'
+<br>
+Out[9]: 'Hello'
+<br>
+In [10]: "Hello"
+<br>
+Out[10]: 'Hello'
+<br><br>
+
+In [11]: tunnel = """
+<br>
+   ....: interface Tunnel0
+   <br>
+   ....:  ip address 10.10.10.1 255.255.255.0
+   <br>
+   ....:  ip mtu 1416
+   <br>
+   ....:  ip ospf hello-interval 5
+   <br>
+   ....:  tunnel source FastEthernet1/0
+   <br>
+   ....:  tunnel protection ipsec profile DMVPN
+   <br>
+   ....: """
+   <br><br>
+
+In [12]: tunnel
+<br>
+Out[12]: '\ninterface Tunnel0\n ip address 10.10.10.1 255.255.255.0\n ip mtu 1416\n ip ospf hello-interval 5\n tunnel source FastEthernet1/0\n tunnel protection ipsec profile DMVPN\n'
+<br><br>
+
+In [13]: print(tunnel)
+<br><br>
+
+interface Tunnel0
+<br>
+ ip address 10.10.10.1 255.255.255.0
+ <br>
+ ip mtu 1416
+ <br>
+ ip ospf hello-interval 5
+ <br>
+ tunnel source FastEthernet1/0
+ <br>
+ tunnel protection ipsec profile DMVPN
+ <br><br>
+
+Строки можно суммировать. Тогда они объединяются в одну строку:
+<br><br>
+
+In [14]: intf = 'interface'
+<br><br>
+
+In [15]: tun = 'Tunnel0'
+<br><br>
+
+In [16]: intf + tun
+<br>
+Out[16]: 'interfaceTunnel0'
+<br><br>
+
+In [17]: intf + ' ' + tun
+<br>
+Out[17]: 'interface Tunnel0'
+<br><br>
+
+Строку можно умножать на число. В этом случае, строка повторяется указанное количество раз:
+<br><br>
+
+In [18]: intf * 5
+<br>
+Out[18]: 'interfaceinterfaceinterfaceinterfaceinterface'
+<br><br>
+
+In [19]: '#' * 40
+<br>
+Out[19]: '########################################'
+<br><br>
+
+То, что строки являются упорядоченным типом данных, позволяет обращаться к символам в строке по номеру, начиная с нуля:
+<br><br>
+
+In [20]: string1 = 'interface FastEthernet1/0'
+<br><br>
+
+In [21]: string1[0]
+<br>
+Out[21]: 'i'
+<br><br>
+
+Нумерация всех символов в строке идет с нуля. Но, если нужно обратиться к какому-то по счету символу, начиная с конца, то можно указывать отрицательные значения (на этот раз с единицы).
+<br><br>
+
+In [22]: string1[1]
+<br>
+Out[22]: 'n'
+<br><br>
+
+In [23]: string1[-1]
+<br>
+Out[23]: '0'
+<br><br>
+
+Кроме обращения к конкретному символу, можно делать срезы строк, указав диапазон номеров (срез выполняется по второе число, не включая его):
+<br><br>
+
+In [24]: string1[0:9]
+<br>
+Out[24]: 'interface'
+<br><br>
+
+In [25]: string1[10:22]
+<br>
+Out[25]: 'FastEthernet'
+<br><br>
+
+Если не указывается второе число, то срез будет до конца строки:
+<br><br>
+
+In [26]:  string1[10:]
+<br>
+Out[26]: 'FastEthernet1/0'
+<br>
+
+Срезать три последних символа строки:
+<br><br>
+
+In [27]: string1[-3:]
+<br><br>
+Out[27]: '1/0'
+<br><br>
+
+Также в срезе можно указывать шаг. Так можно получить нечетные числа:
+<br><br>
+
+In [28]: a = '0123456789'
+<br><br>
+
+In [29]: a[1::2]
+<br>
+Out[29]: '13579'
+<br><br>
+
+А таким образом можно получить все четные числа строки a:
+<br><br>
+
+In [31]: a[::2]
+<br>
+Out[31]: '02468'
+<br><br>
+
+Срезы также можно использовать для получения строки в обратном порядке:
+<br><br>
+
+In [28]: a = '0123456789'
+<br><br>
+
+In [29]: a[::]
+<br>
+Out[29]: '0123456789'
+<br><br>
+
+In [30]: a[::-1]
+<br>
+Out[30]: '9876543210'
+<br><br>
+
+Примечание
+<br><br>
+
+Записи a[::] и a[:] дают одинаковый результат, но двойное двоеточие позволяет указывать, что надо брать не каждый элемент, а, например, каждый второй.
+<br><br>
+
+Функция len позволяет получить количество символов в строке:
+<br><br>
+
+In [1]: line = 'interface Gi0/1'
+<br><br>
+
+In [2]: len(line)
+<br>
+Out[2]: 15
+<br><br>
+
+Примечание
+<br><br>
+
+Функция и метод отличаются тем, что метод привязан к объекту конкретного типа, а функция, как правило, более универсальная и может применяться к объектам разного типа.
+<br>
+ Например, функция len может применяться к строкам, спискам, словарям и так далее, а метод startswith относится только к строкам.
+</big>
+           </div>
+
+   </section>
+    <section id="Список (List)">
+   		</div>
+	  <hr>
+	  <div style="position: relative;background-color: #F0E68C;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Список (List)</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Список в Python это:
+	       	<br><br>
+
+    последовательность элементов, разделенных между собой запятой и 
+    <br>
+    заключенных в квадратные скобки
+    <br>
+    изменяемый упорядоченный тип данных
+    <br><br>
+
+Примеры списков:
+<br><br>
+
+In [1]: list1 = [10,20,30,77]
+<br>
+In [2]: list2 = ['one', 'dog', 'seven']
+<br>
+In [3]: list3 = [1, 20, 4.0, 'word']
+<br>
+
+Создание списка с помощью литерала:
+<br><br>
+
+In [1]: vlans = [10, 20, 30, 50]
+<br><br>
+
+Примечание
+<br><br>
+
+Литерал - это выражение, которое создает объект.
+<br><br>
+
+Создание списка с помощью функции list():
+<br><br>
+
+In [2]: list1 = list('router')
+<br><br>
+
+In [3]: print(list1)
+<br>
+['r', 'o', 'u', 't', 'e', 'r']
+<br><br>
+
+Так как список - это упорядоченный тип данных, то, как и в строках, в списках можно обращаться к элементу по номеру, делать срезы:
+<br><br>
+
+In [4]: list3 = [1, 20, 4.0, 'word']
+<br><br>
+
+In [5]: list3[1]
+<br>
+Out[5]: 20
+<br><br>
+
+In [6]: list3[1::]
+<br>
+Out[6]: [20, 4.0, 'word']
+<br><br>
+
+In [7]: list3[-1]
+<br>
+Out[7]: 'word'
+<br><br>
+
+In [8]: list3[::-1]
+<br><br>
+Out[8]: ['word', 4.0, 20, 1]
+<br><br>
+
+Перевернуть список наоборот можно и с помощью метода reverse():
+<br><br>
+
+In [10]: vlans = ['10', '15', '20', '30', '100-200']
+<br><br>
+
+In [11]: vlans.reverse(
+<br><br>
+
+In [12]: vlans
+<br>
+Out[12]: ['100-200', '30', '20', '15', '10']
+<br><br>
+
+Так как списки изменяемые, элементы списка можно менять:
+<br><br>
+
+In [13]: list3
+<br>
+Out[13]: [1, 20, 4.0, 'word']
+<br><br>
+
+In [14]: list3[0] = 'test'
+<br><br>
+
+In [15]: list3
+<br>
+Out[15]: ['test', 20, 4.0, 'word']
+<br><br>
+
+Можно создавать и список списков. И, как и в обычном списке, можно обращаться к элементам во вложенных списках:
+<br><br>
+
+In [16]: interfaces = [['FastEthernet0/0', '15.0.15.1', 'YES', 'manual',
+<br>
+ 'up', 'up'],
+ <br>
+   ....: ['FastEthernet0/1', '10.0.1.1', 'YES', 'manual', 'up', 'up'],
+   <br>
+   ....: ['FastEthernet0/2', '10.0.2.1', 'YES', 'manual', 'up', 'down']]
+   <br><br>
+
+In [17]: interfaces[0] [0]
+<br>
+Out[17]: 'FastEthernet0/0'
+<br>
+
+In [18]: interfaces[2][0]
+<br>
+Out[18]: 'FastEthernet0/2'
+<br><br>
+
+In [19]: interfaces[2][1]
+<br>
+Out[19]: '10.0.2.1'
+<br><br>
+
+Функция len возвращает количество элементов в списке:
+<br><br>
+
+In [1]: items = [1, 2, 3]
+<br><br>
+
+In [2]: len(items)
+<br>
+Out[2]: 3
+<br><br>
+
+А функция sorted сортирует элементы списка по возрастанию и возвращает новый список с отсортированными элементами:
+<br><br>
+
+In [1]: names = ['John', 'Michael', 'Antony']
+<br><br>
+
+In [2]: sorted(names)
+<br>
+Out[2]: ['Antony', 'John', 'Michael']
+
+</big>
+           </div>
+   </section>
+    <section id="Словарь (Dictionary)">
+   		</div>
+	  <hr>
+	  <div style="position: relative;background-color: #DDA0DD;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Словарь (Dictionary)</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Словари - это изменяемый упорядоченный тип данных:
+	       	<br><br>
+
+    данные в словаре - это пары ключ: значение
+    <br>
+    доступ к значениям осуществляется по ключу, а не по номеру, как в
+    <br>
+     списках
+     <br>
+    данные в словаре упорядочены по порядку добавления элементов
+    <br>
+    так как словари изменяемы, то элементы словаря можно менять, 
+    <br>
+    добавлять, удалять
+    <br>
+    ключ должен быть объектом неизменяемого типа: число, строка, кортеж
+    <br>
+    значение может быть данными любого типа
+    <br><br>
+
+Примечание
+<br><br>
+
+В других языках программирования тип данных подобный словарю может
+ <br>
+называться ассоциативный массив, хеш или хеш-таблица.
+<br><br>
+
+Пример словаря:
+<br><br>
+
+london = {'name': 'London1', 'location': 'London Str', 'vendor': 'Cisco'}
+<br><br>
+
+Можно записывать и так:
+<br><br>
+
+london = {
+	<br>
+    'id': 1,
+    <br>
+    'name': 'London',
+    <br>
+    'it_vlan': 320,
+    <br>
+    'user_vlan': 1010,
+    <br>
+    'mngmt_vlan': 99,
+    <br>
+    'to_name': None,
+    <br>
+    'to_id': None,
+    <br>
+    'port': 'G1/0/11'
+    <br>
+}
+<br><br>
+
+Для того, чтобы получить значение из словаря, надо обратиться по ключу,
+<br>
+ таким же образом, как это было в списках, только вместо номера будет 
+ <br>
+ использоваться ключ:
+ <br><br>
+
+In [1]: london = {'name': 'London1', 'location': 'London Str'}
+<br><br>
+
+In [2]: london['name']
+<br>
+Out[2]: 'London1'
+<br><br>
+
+In [3]: london['location']
+<br>
+Out[3]: 'London Str'
+<br><br>
+
+Аналогичным образом можно добавить новую пару ключ-значение:
+<br><br>
+
+In [4]: london['vendor'] = 'Cisco'
+<br><br>
+
+In [5]: print(london)
+<br>
+{'vendor': 'Cisco', 'name': 'London1', 'location': 'London Str'}
+<br><br>
+
+В словаре в качестве значения можно использовать словарь:
+<br><br>
+
+london_co = {
+	<br>
+    'r1': {
+    	<br>
+        'hostname': 'london_r1',
+        <br>
+        'location': '21 New Globe Walk',
+        <br>
+        'vendor': 'Cisco',
+        <br>
+        'model': '4451',
+        <br>
+        'ios': '15.4',
+        <br>
+        'ip': '10.255.0.1'
+        <br>
+    },
+    <br>
+    'r2': {
+    	<br>
+        'hostname': 'london_r2',
+        <br>
+        'location': '21 New Globe Walk',
+        <br>
+        'vendor': 'Cisco',
+        <br>
+        'model': '4451',
+        <br>
+        'ios': '15.4',
+        <br>
+        'ip': '10.255.0.2'
+        <br>
+    },
+    <br>
+    'sw1': {
+    	<br>
+        'hostname': 'london_sw1',
+        <br>
+        'location': '21 New Globe Walk',
+        <br>
+        'vendor': 'Cisco',
+        <br>
+        'model': '3850',
+        <br>
+        'ios': '3.6.XE',
+        <br>
+        'ip': '10.255.0.101'
+        <br>
+    }
+    <br>
+}
+<br><br>
+
+Получить значения из вложенного словаря можно так:
+<br><br>
+
+In [7]: london_co['r1']['ios']
+<br>
+Out[7]: '15.4'
+<br><br>
+
+In [8]: london_co['r1']['model']
+<br>
+Out[8]: '4451'
+<br><br>
+
+In [9]: london_co['sw1']['ip']
+<br>
+Out[9]: '10.255.0.101'
+<br><br>
+
+Функция sorted сортирует ключи словаря по возрастанию и возвращает новый 
+<br>
+список с отсортированными ключами:
+<br><br>
+
+In [1]: london = {'name': 'London1', 'location': 'London Str', 'vendor':
+<br>
+ 'Cisco'}
+ <br><br>
+
+In [2]: sorted(london)
+<br>
+Out[2]: ['location', 'name', 'vendor']
+
+</big>
+           </div>
+   </section>
+   <section id="Кортеж (Tuple)">
+   	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #008080;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Кортеж (Tuple)</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Кортеж в Python это:
+	       	<br><br>
+
+    последовательность элементов, которые разделены между собой запятой 
+    <br>
+    и заключены в скобки
+    <br>
+    неизменяемый упорядоченный тип данных
+    <br><br>
+
+Грубо говоря, кортеж - это список, который нельзя изменить. То есть, в 
+<br>
+кортеже есть только права на чтение. Это может быть защитой от случайных
+<br>
+ изменений.
+ <br><br>
+
+Создать пустой кортеж:
+<br><br>
+
+In [1]: tuple1 = tuple()
+<br><br>
+
+In [2]: print(tuple1)
+<br>
+()
+<br><br>
+
+Кортеж из одного элемента (обратите внимание на запятую):
+<br><br>
+
+In [3]: tuple2 = ('password',)
+<br><br>
+
+Кортеж из списка:
+<br><br>
+
+In [4]: list_keys = ['hostname', 'location', 'vendor', 'model', 'ios',
+<br>
+ 'ip']
+ <br><br>
+
+In [5]: tuple_keys = tuple(list_keys)
+<br><br>
+
+In [6]: tuple_keys
+<br>
+Out[6]: ('hostname', 'location', 'vendor', 'model', 'ios', 'ip')
+<br><br>
+
+К объектам в кортеже можно обращаться, как и к объектам списка, по
+<br>
+ порядковому номеру:
+ <br><br>
+
+In [7]: tuple_keys[0]
+<br>
+Out[7]: 'hostname'
+<br><br>
+
+Но так как кортеж неизменяем, присвоить новое значение нельзя:
+<br><br>
+
+In [8]: tuple_keys[1] = 'test'
+<br>
+---------------------------------------------------------------------------
+<br>
+TypeError                                 Traceback (most recent call 
+last)
+<br>
+<ipython-input-9-1c7162cdefa3> in <module>()
+	<br>
+----> 1 tuple_keys[1] = 'test'
+<br><br>
+
+TypeError: 'tuple' object does not support item assignment
+<br><br>
+
+Функция sorted сортирует элементы кортежа по возрастанию и возвращает 
+<br>
+новый список с отсортированными элементами:
+<br><br>
+
+In [2]: tuple_keys = ('hostname', 'location', 'vendor', 'model', 'ios', 
+<br>
+'ip')
+<br><br>
+
+In [3]: sorted(tuple_keys)
+<br>
+Out[3]: ['hostname', 'ios', 'ip', 'location', 'model', 'vendor']
+
+</big>
+           </div>
+   </section>
+   <section id="Множество (Set)">
+   	  	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #B0C4DE;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Множество (Set)</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Множество - это изменяемый неупорядоченный тип данных. В
+	       <br>
+	        множестве всегда содержатся только уникальные элементы.
+	        <br><br>
+
+Множество в Python - это последовательность элементов, которые разделены
+<br>
+ между собой запятой и заключены в фигурные скобки.
+ <br><br>
+
+С помощью множества можно легко убрать повторяющиеся элементы:
+<br><br>
+
+In [1]: vlans = [10, 20, 30, 40, 100, 10]
+<br><br>
+
+In [2]: set(vlans)
+<br>
+Out[2]: {10, 20, 30, 40, 100}
+<br><br>
+
+In [3]: set1 = set(vlans)
+<br><br>
+
+In [4]: print(set1)
+<br>
+{40, 100, 10, 20, 30}
+
+
+</big>
+           </div>
+   </section>
+   <section id="Булевы значения">
+   	  	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #00FFFF;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Булевы значения</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Булевы значения в Python это две константы True и False.
+	       	<br><br>
+
+В Python истинными и ложными значениями считаются не только True и 
+<br>
+False.
+<br><br>
+
+    истинное значение:
+    <br>
+        любое ненулевое число
+        <br>
+        любая непустая строка
+        <br>
+        любой непустой объект
+        <br>
+    ложное значение:
+    <br>
+        0
+        <br>
+        None
+        <br>
+        пустая строка
+        <br>
+        пустой объект
+        <br><br>
+
+Остальные истинные и ложные значения, как правило, логически следуют из 
+<br>
+условия.
+<br><br>
+
+Для проверки булевого значения объекта, можно воспользоваться bool:
+<br><br>
+
+In [2]: items = [1, 2, 3]
+<br><br>
+
+In [3]: empty_list = []
+<br><br>
+
+In [4]: bool(empty_list)
+<br>
+Out[4]: False
+<br><br>
+
+In [5]: bool(items)
+<br>
+Out[5]: True
+<br><br>
+
+In [6]: bool(0)
+<br>
+Out[6]: False
+<br><br>
+
+In [7]: bool(1)
+<br>
+Out[7]: True
+
+
+</big>
+           </div>
+   </section>
+   <section id="Преобразование типов">
+   	   	  	</div>
+	  <hr>
+	  <div style="position: relative;background-color:#7B68EE;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Преобразование типов</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>В Python есть несколько полезных встроенных функций, которые 
+           <br>
+	       	позволяют преобразовать данные из одного типа в другой.
+	       	<br><br>
+int
+<br><br>
+
+int преобразует строку в int:
+<br><br>
+
+In [1]: int("10")
+<br>
+Out[1]: 10
+<br><br>
+
+С помощью функции int можно преобразовать и число в двоичной 
+<br>
+записи в десятичную (двоичная запись должна быть в виде строки)
+<br><br>
+
+In [2]: int("11111111", 2)
+<br>
+Out[2]: 255
+<br><br>
+
+bin
+<br><br>
+
+Преобразовать десятичное число в двоичный формат можно с помощью 
+<br>
+bin:
+<br><br>
+
+In [3]: bin(10)
+<br>
+Out[3]: '0b1010'
+<br><br>
+
+In [4]: bin(255)
+<br>
+Out[4]: '0b11111111'
+<br><br>
+
+hex
+<br><br>
+
+Аналогичная функция есть и для преобразования в шестнадцатеричный 
+<br>
+формат:
+<br><br>
+
+In [5]: hex(10)
+<br>
+Out[5]: '0xa'
+<br><br>
+
+In [6]: hex(255)
+<br>
+Out[6]: '0xff'
+<br><br>
+
+list
+<br><br>
+
+Функция list преобразует аргумент в список:
+<br><br>
+
+In [7]: list("string")
+<br>
+Out[7]: ['s', 't', 'r', 'i', 'n', 'g']
+<br><br>
+
+In [8]: list({1, 2, 3})
+<br>
+Out[8]: [1, 2, 3]
+<br><br>
+
+In [9]: list((1, 2, 3, 4))
+<br>
+Out[9]: [1, 2, 3, 4]
+<br><br>
+
+set
+<br><br>
+
+Функция set преобразует аргумент в множество:
+<br><br>
+
+In [10]: set([1, 2, 3, 3, 4, 4, 4, 4])
+<br>
+Out[10]: {1, 2, 3, 4}
+<br><br>
+
+In [11]: set((1, 2, 3, 3, 4, 4, 4, 4))
+<br>
+Out[11]: {1, 2, 3, 4}
+<br><br>
+
+In [12]: set("string string")
+<br>
+Out[12]: {' ', 'g', 'i', 'n', 'r', 's', 't'}
+<br><br>
+
+Эта функция очень полезна, когда нужно получить уникальные элементы
+<br>
+ в последовательности.
+ <br><br>
+
+tuple
+<br><br>
+
+Функция tuple преобразует аргумент в кортеж:
+<br><br>
+
+In [13]: tuple([1, 2, 3, 4])
+<br>
+Out[13]: (1, 2, 3, 4)
+<br><br>
+
+In [14]: tuple({1, 2, 3, 4})
+<br>
+Out[14]: (1, 2, 3, 4)
+<br><br>
+
+In [15]: tuple("string")
+<br>
+Out[15]: ('s', 't', 'r', 'i', 'n', 'g')
+<br>
+
+Это может пригодиться в том случае, если нужно получить 
+<br>
+неизменяемый объект.
+<br><br>
+
+str
+<br><br>
+
+Функция str преобразует аргумент в строку:
+<br><br>
+
+In [16]: str(10)
+<br>
+Out[16]: '10'
+
+
+</big>
+           </div>
+   </section>
+   <section id="Проверка типов">
+   	   	  	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #87CEFA;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Преобразование типов</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>В Python есть несколько полезных встроенных функций, которые 
+	       	<br>
+	       	позволяют преобразовать данные из одного типа в другой.
+	       	<br><br>
+int
+<br><br>
+
+int преобразует строку в int:
+<br><br>
+
+In [1]: int("10")
+<br>
+Out[1]: 10
+<br><br>
+
+С помощью функции int можно преобразовать и число в двоичной 
+<br>
+записи в десятичную (двоичная запись должна быть в виде строки)
+<br><br>
+
+In [2]: int("11111111", 2)
+<br>
+Out[2]: 255
+<br><br>
+
+bin
+<br><br>
+
+Преобразовать десятичное число в двоичный формат можно с помощью 
+<br>
+bin:
+<br><br>
+
+In [3]: bin(10)
+<br>
+Out[3]: '0b1010'
+<br><br>
+
+In [4]: bin(255)
+<br>
+Out[4]: '0b11111111'
+<br><br>
+
+hex
+<br><br>
+
+Аналогичная функция есть и для преобразования в шестнадцатеричный 
+<br>
+формат:
+<br><br>
+
+In [5]: hex(10)
+<br>
+Out[5]: '0xa'
+<br><br>
+
+In [6]: hex(255)
+<br>
+Out[6]: '0xff'
+<br><br>
+
+list
+<br><br>
+
+Функция list преобразует аргумент в список:
+<br><br>
+
+In [7]: list("string")
+<br>
+Out[7]: ['s', 't', 'r', 'i', 'n', 'g']
+<br><br>
+
+In [8]: list({1, 2, 3})
+<br>
+Out[8]: [1, 2, 3]
+<br>
+
+In [9]: list((1, 2, 3, 4))
+<br>
+Out[9]: [1, 2, 3, 4]
+<br><br>
+
+set
+<br><br>
+
+Функция set преобразует аргумент в множество:
+<br><br>
+
+In [10]: set([1, 2, 3, 3, 4, 4, 4, 4])
+<br>
+Out[10]: {1, 2, 3, 4}
+<br><br>
+
+In [11]: set((1, 2, 3, 3, 4, 4, 4, 4))
+<br>
+Out[11]: {1, 2, 3, 4}
+<br><br>
+
+In [12]: set("string string")
+<br>
+Out[12]: {' ', 'g', 'i', 'n', 'r', 's', 't'}
+<br><br>
+
+Эта функция очень полезна, когда нужно получить уникальные элементы
+<br>
+ в последовательности.
+ <br><br>
+
+tuple
+<br><br>
+
+Функция tuple преобразует аргумент в кортеж:
+<br><br>
+
+In [13]: tuple([1, 2, 3, 4])
+<br>
+Out[13]: (1, 2, 3, 4)
+<br><br>
+
+In [14]: tuple({1, 2, 3, 4})
+<br>
+Out[14]: (1, 2, 3, 4)
+<br><br>
+
+In [15]: tuple("string")
+<br>
+Out[15]: ('s', 't', 'r', 'i', 'n', 'g')
+<br><br>
+
+Это может пригодиться в том случае, если нужно получить 
+<br>
+неизменяемый объект.
+<br><br>
+
+str
+<br><br>
+
+Функция str преобразует аргумент в строку:
+<br><br>
+
+In [16]: str(10)
+<br>
+Out[16]: '10'
+
+
+</big>
+           </div>
+   </section>
+   <section id="Вызов методов цепочкой">
+   	   	   	  	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #AFEEEE;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Вызов методов цепочкой</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>Часто с данными надо выполнить несколько операций, например:
+	       	<br><br>
+
+In [1]: line = "switchport trunk allowed vlan 10,20,30"
+<br><br>
+
+In [2]: words = line.split()
+<br><br>
+
+In [3]: words
+<br>
+Out[3]: ['switchport', 'trunk', 'allowed', 'vlan', '10,20,30']
+<br><br>
+
+In [4]: vlans_str = words[-1]
+<br><br>
+
+In [5]: vlans_str
+<br>
+Out[5]: '10,20,30'
+<br><br>
+
+In [6]: vlans = vlans_str.split(",")
+<br><br>
+
+In [7]: vlans
+<br>
+Out[7]: ['10', '20', '30']
+<br><br>
+
+Или в скрипте:
+<br><br>
+
+line = "switchport trunk allowed vlan 10,20,30"
+<br>
+words = line.split()
+<br>
+vlans_str = words[-1]
+<br>
+vlans = vlans_str.split(",")
+<br>
+print(vlans)
+<br><br>
+
+В этом случае переменные используются для хранения промежуточного 
+<br>
+результата и последующие методы/действия выполняются уже с
+<br>
+ переменной. Это совершенно нормальный вариант кода, особенно
+ <br> поначалу, когда тяжело воспринимать более сложные выражения.
+ <br><br>
+
+Однако в Python часто встречаются выражения, в которых действия или 
+<br>
+методы применяются один за другим в одном выражении. Например,
+<br>
+ предыдущий код можно записать так:
+ <br><br>
+
+line = "switchport trunk allowed vlan 10,20,30"
+<br>
+vlans = line.split()[-1].split(",")
+<br>
+print(vlans)
+<br><br>
+
+Так как тут нет выражений в скобках, которые бы указывали приоритет 
+<br>
+выполнения, все выполняется слева направо. Сначала выполняется 
+<br>
+line.split() - получаем список, затем к полученному списку
+<br>
+ применяется [-1] - получаем последний элемент списка, строку
+ <br>
+ 10,20,30. К этой строке применяется метод split(",") и в итоге
+ <br>
+  получаем список ['10', '20', '30'].
+  <br><br>
+
+Главный нюанс при написании таких цепочек предыдущий 
+<br>
+метод/действие должен возвращать то, что ждет следующий 
+<br>
+метод/дествие. И обязательно чтобы что-то возвращалось, иначе будет 
+<br>
+ошибка.
+</big>
+           </div>
+   </section>
+   <section id="Основы сортировки данных">
+   	  	   	   	  	</div>
+	  <hr>
+	  <div style="position: relative;background-color: #B0E0E6;width: 100%;height: 100px;">
+	  <br>	<h2 style="position: relative;text-align:center ;">Основы сортировки данных</h2> 
+	  </div>
+        <section id="Основные типы данных в Python">
+        	<hr>
+        <div>
+	       <p style="position: relative;left: 5%;width: 97%;">
+	       <big>При сортировке данных типа списка списков или списка кортежей,
+	       <br>
+	        sorted сортирует по первому элементу вложенных списков (кортежей), a
+	        <br>
+	        если первый элемент одинаковый, по второму:
+	        <br><br>
+
+In [1]: data = [[1, 100, 1000], [2, 2, 2], [1, 2, 3], [4, 100, 3]]
+<br><br>
+
+In [2]: sorted(data)
+<br>
+Out[2]: [[1, 2, 3], [1, 100, 1000], [2, 2, 2], [4, 100, 3]]
+<br><br>
+
+Если сортировка делается для списка чисел, которые записаны как
+<br>
+ строки, сортировка будет лексикографической, не натуральной и
+ <br>
+  порядок будет таким:
+  <br><br>
+
+In [7]: vlans = ['1', '30', '11', '3', '10', '20', '30', '100']
+<br><br>
+
+In [8]: sorted(vlans)
+<br>
+Out[8]: ['1', '10', '100', '11', '20', '3', '30', '30']
+<br><br>
+
+Чтобы сортировка была «правильной» надо преобразовать вланы в числа.
+<br><br>
+
+Эта же проблема проявляется, например, с IP-адресами:
+<br><br>
+
+In [2]: ip_list = ["10.1.1.1", "10.1.10.1", "10.1.2.1", "10.1.11.1"]
+<br><br>
+
+In [3]: sorted(ip_list)
+<br>
+Out[3]: ['10.1.1.1', '10.1.10.1', '10.1.11.1', '10.1.2.1']
+<br><br>
+
+Как решить проблему с сортировкой IP-адресов рассматривается в 
+<br>
+разделе «10. Полезные функции».
+<hr>
+</big>
+           </div>
+   </section>
+   <div>
+   	 <p>Кудлаев Андрей Сергеевич</p>
+     <p>Адрес: Кыргызыстан, Г. Бишкек, Ул. Краснодарская 25/12.</p>
+     <p>Email: <a href="#0">nricolista@gmail.com</a></p>
+   </div>
+</head>
+<body>
+	
+</body>
+</html>
